@@ -1,0 +1,61 @@
+extends layout
+
+block content
+	.jumbotron
+		.container
+			h1 Catering Service
+			i
+				p "We give what You deserve"
+		.container
+			.picsx
+				img(src='../images/logo.png' height = '200px' width = '200px')
+	.container
+		form(method='post', action='contact/send')
+
+			.form-group
+				label Name
+				input.form-control(type = 'text', name='name', placeholer='Enter Name')
+
+			.form-group
+				label Email
+				input.form-control(type = 'text', name='email', placeholer='Enter  Emai')
+
+			.form-group
+				label Event:
+				br
+				input(type='radio', name='event', value='Kiddie Party')
+				| Kiddie Party
+				input(type='radio', name='event', value='Marriage Reception')
+				| Marriage reception
+				input(type='radio', name='event', value='Debut Party') 
+				| Debut Party
+
+			.form-group
+				label Package:
+				br
+				input(type='radio', name='package', value='1')
+				| Package1
+				| 
+				input(type='radio', name='package', value='2')
+				| Package2 
+				| 
+				input(type='radio', name='package', value='3')
+				| Package3
+
+			.form-group
+				label Mode of Payment:
+				br
+				input(type='radio', name='payment', value='Cash')
+				| Cash
+				input(type='radio', name='payment', value='Credit Card')
+				| Credit Card
+				input(type='radio', name='payment', value='Remittance')
+				| Remittance
+
+			.form-group
+				label message
+				textarea.form-control(name='message', placeholer='Enter Message...')
+				
+
+			button.btn.btn-default(type='submit') Submit
+
