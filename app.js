@@ -12,6 +12,7 @@ var mar = require('./routes/marriage');
 var kid = require('./routes/kiddie');
 var deb = require('./routes/debut');
 var contact = require('./routes/contact');
+var menu = require('./routes/menu');
 
 
 var app = express();
@@ -34,7 +35,7 @@ app.use('/marriage', mar);
 app.use('/kiddie', kid);
 app.use('/debut', deb);
 app.use('/contact', contact);
-
+app.use('/menu', menu);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
