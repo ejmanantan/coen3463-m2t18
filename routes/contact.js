@@ -12,14 +12,14 @@ router.post('/send', function(req,res,next){
 	var transporter = nodemailer.createTransport({
 		service: 'Gmail',
 		auth:{
-			user: 'erick.manantan@gmail.com',
-			pass: 'Rumble123'
+			user: 'coen3463t18@gmail.com',
+			pass: 'coen3463143'
 		}
 	});
 
 	var mailOptions = {
 		from: req.body.email,
-		to: 'erick.manantan@gmail.com',
+		to: 'coen3463t18@gmail.com',
 		subject: 'Order',
 		text: 'I would like to avail the ' + req.body.event + ' with Package number ' + req.body.package + ' and a mode of payment of '+ req.body.payment + ' ' + req.body.message,
 		html: '<p> You got a new message with the following details</p><ul><li> Name: '+req.body.name+'</li><li> Email: '+req.body.email+'</li><li> Event: '+req.body.event+'</li><li> Package: '+req.body.package+'</li><li> Mode of payment: '+req.body.payment+ '</li><li> Message: '+req.body.message +'</li></ul>'
